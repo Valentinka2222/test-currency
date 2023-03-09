@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h4 {
+  text-align: center;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  min-width: 33%;
+  flex: 1 0;
+}
+
+span:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+option {
+  width: 50px;
+}
+
+select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+}
+
+.App {
+  width: 80vw;
+  height: 80vh;
+  padding: 50px;
+  border: solid 3px grey;
+  border-radius: 10px;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  height: 150px;
+  background: rgba(47, 166, 166, 0.891282) 35%;
+  animation: falls 1s ease 0.3s;
+  border: 7px solid white;
+  border-radius: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.board__convert-currency {
+  display: table;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.currency {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.currency__mount {
+  width: 45%;
+}
+
+@keyframes falls {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 100px;
+  }
+}
